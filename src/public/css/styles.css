@@ -8,6 +8,16 @@ padding: 0;
     height: auto;
 }
 
+h1
+{
+  color: #539B52;
+}
+
+th
+{
+  background-color: #8EC38D  ;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -48,4 +58,32 @@ padding: 0;
   }
   .lguser{
     border-radius: 5px;
+  }
+
+
+/*HOMPAGE - LIST USER*/
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid #8EC38D ;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color: #ddd;}
+  .table-container
+  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .title
+  {
+    margin: 10px 5px 0px 10px;
   }

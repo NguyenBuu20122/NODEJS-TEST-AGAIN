@@ -4,7 +4,7 @@ const express = require('express')
 const app = express() // tạo app express
 const configViewEngine=require('./config/viewEngine');// khai báo sử dụng file cấu hình template view engine.
 const staticFile=require('./config/staticFile');// khai báo sử dụng file cấu hình tìm thư mục chứa file tĩnh
-//console.log('Chek env', process.env)
+
 const webRoutes=require('./routes/web');
 const port = process.env.PORT || 8989 //port
 const hostname=process.env.HOST_NAME
@@ -19,5 +19,5 @@ staticFile(app);//gọi hàm thiết đặt cấu hình file tĩnh ở file conf
 app.use('/',webRoutes);
 
 app.listen(port,hostname, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on  ${hostname},port ${port}`)
 })

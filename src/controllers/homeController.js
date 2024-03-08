@@ -2,15 +2,18 @@ const getHomePage=(req,res)=>{
 
     //process data
     //call models
-    res.send('Đây là Trang chủ!')
+    res.render('home.ejs');
 }
-
 const addNewUser=(req,res)=>{
     res.render('add-new-user.ejs');
 }
 
-const aac =(req,res)=>{
-    res.send('Route Link aac')
+const contact =(req,res)=>{
+    res.render('contact.ejs');
+}
+const about =(req,res)=>{
+    res.render('about.ejs');
 }
 
-module.exports={getHomePage,aac,addNewUser}
+
+module.exports={getHomePage,contact,addNewUser,about}

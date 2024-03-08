@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-const {getHomePage,aac,addNewUser}=require('../controllers/homeController')
+const {getHomePage,contact,addNewUser,about}=require('../controllers/homeController')
 const {getSampleTestEjs}=require('../controllers/testEjs')
 const {addNewUserpost}=require('../controllers/addNewUser')
 
@@ -16,8 +16,10 @@ const {addNewUserpost}=require('../controllers/addNewUser')
 
   router.get ('/',getHomePage)
   router.get('/first-test-ejs',getSampleTestEjs)
-  router.get('/aac',aac)
+
   router.get('/add-new-user',addNewUser)
   router.post('/add-new-user',addNewUserpost)
+  router.get('/contact',contact)
+  router.get('/about',about)
 
   module.exports = router;
