@@ -12,7 +12,7 @@
         <a href="/contact">Contact</a>
         <a href="/about">About</a>
       </div>
-      <%=  %>
+
       <h1 class="title"> List user</h1>
      <div class="table-container">
         <table>
@@ -40,7 +40,7 @@
                 <td><%=user.email %></td>
                 <td><%=user.name %></td>
                 <td><%=user.city %></td>
-                <td class="thaction"> <input type="button" value="EDIT"> || <input type="button" value="DEL"></td>
+                <td class="thaction"> <a href="/update/<%=user.id %>">Edit</a> || <a href="/delete">Del</a></td>
               </tr>
             <% }) %>
             

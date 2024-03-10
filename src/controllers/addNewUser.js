@@ -1,12 +1,12 @@
-const connection = require('../config/database');
-
+const connection =require('../config/database')
 const addNewUserpost=async (req,res)=>{
+    
     let email=req.body.email;
     let name=req.body.name;
     let city=req.body.city;
-
     let [result,field]= await connection.query(`INSERT INTO user (email,name,city) values(?,?,?)`,
     [email,name,city]);
+    res.send('Add new user success!')
     console.log(">> Result:", result);
 }
 
