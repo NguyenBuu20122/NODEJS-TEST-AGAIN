@@ -12,21 +12,37 @@
         <a href="/contact">Contact</a>
         <a href="/about">About</a>
       </div>
+      <%=  %>
       <h1 class="title"> List user</h1>
      <div class="table-container">
         <table>
             <tr>
-              <th>ID</th>
-              <th>EMAIL</th>
-              <th>NAME</th>
-              <th>CITY</th>
+              <th class="thid">ID</th>
+              <th class="themail">EMAIL</th>
+              <th class="thname">NAME</th>
+              <th class="thcity">CITY</th>
+              <th class="thaction">ACTION</th>
             </tr>
-            <tr>
-              <td>Peter</td>
-              <td>Griffin</td>
-              <td>$100</td>
-              <td>$100</td>
-            </tr>
+
+            <!-- <% for (let i = 0; i < listUsers.length; i++) { %>
+              <tr>
+                <td class="tdid"><%=listUsers[i].id %></td>
+                <td><%=listUsers[i].email %></td>
+                <td><%=listUsers[i].name %></td>
+                <td><%=listUsers[i].city %></td>
+                <td class="thaction"> <input type="button" value="EDIT"> || <input type="button" value="DEL"></td>
+              </tr>
+            <% } %> -->
+
+            <% listUsers.forEach(function(user) { %>
+              <tr>
+                <td class="tdid"><%=user.id %></td>
+                <td><%=user.email %></td>
+                <td><%=user.name %></td>
+                <td><%=user.city %></td>
+                <td class="thaction"> <input type="button" value="EDIT"> || <input type="button" value="DEL"></td>
+              </tr>
+            <% }) %>
             
           </table>
      </div>

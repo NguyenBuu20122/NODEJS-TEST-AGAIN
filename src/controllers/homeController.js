@@ -1,8 +1,9 @@
-const getHomePage=(req,res)=>{
+const {getAllUsers} = require('../services/CRUDServices')
 
-    //process data
-    //call models
-    res.render('home.ejs');
+const getHomePage=async(req,res)=>{
+    let result= await getAllUsers();
+    res.render('home.ejs',{listUsers:result});
+
 }
 const addNewUser=(req,res)=>{
     res.render('add-new-user.ejs');
@@ -16,4 +17,6 @@ const about =(req,res)=>{
 }
 
 
-module.exports={getHomePage,contact,addNewUser,about}
+
+
+module.exports={getHomePage,contact,addNewUser,about,}

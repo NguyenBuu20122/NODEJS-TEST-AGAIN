@@ -62,17 +62,25 @@ th
 
 
 /*HOMPAGE - LIST USER*/
+table,td,tr{ 
+  border: 1px solid #8EC38D ;
+  border-collapse: collapse;
+
+}
   table {
-    border-collapse: collapse;
     width: 90%;
-    border: 1px solid #8EC38D ;
     padding: 10px;
     margin: 10px;
   }
   
-  th, td {
+  th {
     padding: 8px;
-    text-align: left;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+
+  }
+td {
+    padding: 8px;
     border-bottom: 1px solid #ddd;
   }
   
@@ -86,4 +94,29 @@ th
   .title
   {
     margin: 10px 5px 0px 10px;
+  }
+
+  .thid {width: 5%;
+}
+  .themail{width: 27%;}
+  .thname{width: 27%;}
+  .thcity{width: 27%;}
+
+  td.thaction{
+    width: 14%;
+
+    text-align: center;
+    /* 
+    flexbox
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items:center;
+    align-content:center; */
+
+  }
+  td.tdid
+  {
+    text-align: center;
   }
