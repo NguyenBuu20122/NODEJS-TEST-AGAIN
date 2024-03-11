@@ -14,20 +14,25 @@
       </div>
       <div class="formadduser">
         
-        <form method="post" action="updateuser" >
+        <form method="post" action="../update-user" >
             <Fieldset class="lguser">
                 <legend >Edit-User </legend>
+                    <div  class="d-none">
+                        <label  for="userId" id="">ID: </label>
+                        <input type="text" name="userId" value="<%= inforUser.id%>" readonly="readonly">
+                    </div>
+
                     <div class="item-user">
-                        <label for="email"> Email:</label>
-                        <input type="text" name="email" id="" value="<%= inforUser.email%>">
+                        <label for="updateemail" id=""> Email:</label>
+                        <input type="text" name="updateemail" id="" value="<%= inforUser.email%>">
                     </div>
                     <div class="item-user">
-                        <label for="name"> NAME:</label>
-                        <input type="text" name="name" id="" value="<%= inforUser.name %>">
+                        <label for="updatename" id=""> NAME:</label>
+                        <input type="text" name="updatename" id="" value="<%= inforUser.name %>">
                     </div>
                     <div class="item-user">
-                        <label for="city"> CITY:</label>
-                        <input type="text" name="city" id="" value="<%= inforUser.city %>">
+                        <label for="updatecity" id=""> CITY:</label>
+                        <input type="text" name="updatecity" id="" value="<%= inforUser.city %>">
                     </div>
 
                     <div class="item-user">

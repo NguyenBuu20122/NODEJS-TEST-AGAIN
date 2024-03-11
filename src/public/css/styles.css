@@ -22,6 +22,12 @@ a
 {
   text-decoration: none;
 }
+
+.d-none
+{
+  display: none;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
