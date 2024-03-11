@@ -13,6 +13,7 @@ const hostname=process.env.HOST_NAME
 app.use(express.json()) // for json
 app.use(express.urlencoded({ extended: true }))
 
+
 configViewEngine(app);// gọi hàm thiết đặt cấu hình viewsengine- ở file config/viewEngine.js
 staticFile(app);//gọi hàm thiết đặt cấu hình file tĩnh ở file config/staticFile
 
