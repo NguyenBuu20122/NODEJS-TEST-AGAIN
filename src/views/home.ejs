@@ -37,10 +37,10 @@
             <% listUsers.forEach(function(user) { %>
               <tr>
                 <td class="tdid"><%=user.id %></td>
-                <td><%=user.email %></td>
-                <td><%=user.name %></td>
-                <td><%=user.city %></td>
-                <td class="thaction"> <a href="/update/<%=user.id %>">Edit</a> || <a href="/delete">Del</a></td>
+                <td class="tdinfor"><%=user.email %></td>
+                <td class="tdinfor"><%=user.name %></td>
+                <td class="tdinfor"><%=user.city %></td>
+                <td class="tdaction"> <a href="/update/<%=user.id %>"> Edit </a>  ||   <form action="/del-user/<%=user.id%>" method="post"> <button> Del </button> </form></td>
               </tr>
             <% }) %>
             

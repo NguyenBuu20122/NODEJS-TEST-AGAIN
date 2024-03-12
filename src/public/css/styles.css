@@ -106,27 +106,29 @@ td {
     margin: 10px 5px 0px 10px;
   }
 
-  .thid {width: 5%;
-}
-  .themail{width: 27%;}
-  .thname{width: 27%;}
-  .thcity{width: 27%;}
+  .thid {width: 5%;}
+  .themail{width: 29%;}
+  .thname{width: 29%;}
+  .thcity{width: 29%;}
+  .thaction{width: 8%;}
 
-  td.thaction{
-    width: 14%;
+.tdaction{
 
     text-align: center;
-    /* 
-    flexbox
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content:space-evenly ;
     align-items:center;
-    align-content:center; */
-
+    align-content:center; 
   }
   td.tdid
   {
     text-align: center;
+  }
+  .tdinfor
+  {
+    flex-wrap:nowrap;
+    justify-content:flex-start ;
+   
   }

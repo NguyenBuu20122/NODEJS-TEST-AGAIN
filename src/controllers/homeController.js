@@ -1,4 +1,4 @@
-const {getAllUsers,getUserById,upDateUserByid} = require('../services/CRUDServices') // khai báo sử dụng hàm getAllUsers
+const {getAllUsers,getUserById,upDateUserByid,delUserByid} = require('../services/CRUDServices') // khai báo sử dụng hàm getAllUsers
 const connection = require('../config/database');
 
 
@@ -25,14 +25,25 @@ const getUpdatePage=async(req,res)=>{
 
 
 const upDateUserPost = async (req,res)=>{
-    let email=req.body.updateemail;
+    let email=req.body.updateemail;//lấy dữ liệu từ thẻ form truyền sang bằng cú pháp red.body.{tên của input html}- muốn sử dụng cú pháp này cần phải chèn 2 câu này vào file sever {--app.use(express.json()) // for json app.use(express.urlencoded({ extended: true }))--}
     let username=req.body.updatename;
     let city = req.body.updatecity;
     let userId= req.body.userId;
-
-    console.log("REQ. BODY Email: ",email," Name: ",username," City: ",city," UserId: ",userId)
+    // console.log("REQ. BODY Email: ",email," Name: ",username," City: ",city," UserId: ",userId)
     await upDateUserByid(email,username,city,userId)
     res.redirect('/');
+}
+
+const loadUserdel=async(req,res)=>{
+    const userId=req.params.id;
+    let user=await getUserById(userId);
+    res.render('delUser.ejs',{inforuser:user})
+}
+
+const delUserPost=async(req,res)=>{
+    let id =  req.body.id;
+    await delUserByid(id);
+    res.redirect('/')
 }
 
 
@@ -50,4 +61,4 @@ const about =(req,res)=>{
 
 
 
-module.exports={getHomePage,contact,addNewUser,about,getUpdatePage,upDateUserPost}
+module.exports={getHomePage,contact,addNewUser,about,getUpdatePage,upDateUserPost,loadUserdel,delUserPost}

@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Delete-User</title>
+</head>
+<body>
+    <div class="topnav">
+        <a  href="/">Home</a>
+        <a href="/add-new-user">Create User</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="formadduser">
+        <form method="post" action="../del" >
+            <Fieldset class="lguser">
+                <legend >DEL-USER </legend>
+                <div class="d-none">
+                    <label for="id"> ID:</label>
+                    <input type="text" name="id"  value="<%= inforuser.id%>" readonly="readonly">
+                </div>
+                <div><p color="red"> Are you sure delete an account with this email!</p> </div>
+                    <div class="item-user">
+                        <label > <%= inforuser.email%></label>
+                    </div>
+                    <div class="item-user">
+                        <input type="submit" value="Del">
+                    </div>
+            </Fieldset>
+        </form>
+      </div>
+</body>
+</html>

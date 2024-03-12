@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-const {getHomePage,contact,addNewUser,about,getUpdatePage,upDateUserPost}=require('../controllers/homeController')
+const {getHomePage,contact,addNewUser,about,getUpdatePage,upDateUserPost,loadUserdel,delUserPost}=require('../controllers/homeController')
 const {getSampleTestEjs}=require('../controllers/testEjs')
 const {addNewUserpost}=require('../controllers/addNewUser')
 
@@ -21,8 +21,10 @@ const {addNewUserpost}=require('../controllers/addNewUser')
   router.get('/about',about)
 
   router.get('/update/:id',getUpdatePage)
-
   router.post('/add-new-user',addNewUserpost)
   router.post('/update-user',upDateUserPost)
+  router.post('/del-user/:id',loadUserdel)
+  router.post('/del',delUserPost)
+
 
   module.exports = router;
